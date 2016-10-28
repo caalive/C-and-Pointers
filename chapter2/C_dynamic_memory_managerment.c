@@ -17,11 +17,11 @@ int main()
 	return 0;	
 	*/
 	
-	char *name = malloc(strlen("susan")+1);
+	char *name = malloc(strlen("susan")+1);  //malloc memory
 	if(name != NULL)
 	{
-		strcpy(name,"Susan");
-		while(*name != 0)
+		strcpy(name,"Susan");                //fill memory field
+		while(*name != 0)                    //print name value
 		{
 			printf("%c",*name);
 			name++;
@@ -58,12 +58,12 @@ int main()
 	string2 = (char*)realloc(string1,50);
 	printf("string1 Value:%p[%s]\n",string1,string1);
 	free(string1);
-	string1 = NULL;
+	string1 = NULL;										//free string1
 	printf("string2 Value:%p[%s]\n",string2,string2);
-	
-	free(name);
-	name = NULL;
-	free(string2);
+			
+	free(name);											//free name														
+	name = NULL;										//set name NULL 
+	free(string2);											
 	string2 = NULL;
 	return 0;
 		
